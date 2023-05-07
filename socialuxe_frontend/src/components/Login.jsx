@@ -3,7 +3,7 @@ import { GoogleLogin } from '@react-oauth/google';
 import jwt_decode from 'jwt-decode';
 import { client } from '../client.js';
 import { useNavigate } from 'react-router-dom';
-import logo from '../assets/logo2.png';
+import logo from '../assets/logo.png';
 import bgVideo from '../assets/bg-video.mp4';
 
 const Login = () => {
