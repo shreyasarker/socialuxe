@@ -11,7 +11,7 @@ const Login = () => {
 
   const responseMessage = (response) => {
     const user = jwt_decode(response.credential);
-    localStorage.setItem('user', user);
+    localStorage.setItem('user', JSON.stringify(user));
     const {name, aud, picture} = user;
     
     const doc = {
