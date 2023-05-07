@@ -28,7 +28,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="flex bg-gray-50 md-flex-row flex-col h-screen transition-height duration-75 ease-out">
+    <div className="flex bg-gray-50 md:flex-row flex-col h-screen transition-height duration-75 ease-out">
       <div className='hidden md:flex h-screen flex-initial'>
         <Sidebar user={user && user} />
       </div>
@@ -36,10 +36,13 @@ const Home = () => {
         <div className="p-2 w-full flex flex-row justify-between items-center shadow-md">
           <HiMenu fontSize={40} className="cursor-pointer" onClick={() => setToggleSidebar(true)} />
           <Link to="/">
-            <img src={logo} alt="logo" className="w-12" />
+            <span className="flex justify-center">
+              <img src={logo} alt="Logo" className="w-12" />
+              <h2 className="mt-2 font-bold">Socialuxe</h2>
+            </span>
           </Link>
           <Link to={`user-profile/${user?._id}`}>
-            <img src={user?.image} alt="logo" className="w-12" />
+            <img src={user?.image} alt="User profile" className="w-12 h-10 rounded-full" />
           </Link>
         </div>
         {toggleSidebar && (
