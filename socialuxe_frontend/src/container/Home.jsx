@@ -38,7 +38,7 @@ const Home = () => {
           <Link to="/">
             <span className="flex justify-center">
               <img src={logo} alt="Logo" className="w-12" />
-              <h2 className="mt-2 font-bold">Socialuxe</h2>
+              <h2 className="mt-2 font-bold uppercase">Socialuxe</h2>
             </span>
           </Link>
           <Link to={`user-profile/${user?._id}`}>
