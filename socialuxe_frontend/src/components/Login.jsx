@@ -1,4 +1,4 @@
-import { GoogleOAuthProvider } from '@react-oauth/google';
+
 import { GoogleLogin } from '@react-oauth/google';
 import jwt_decode from 'jwt-decode';
 import { client } from '../client.js';
@@ -30,7 +30,7 @@ const Login = () => {
     console.log(error);
   };
   return (
-  <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
+  <>
     <div id="hero-section" className="max-w-4xl">
       <div className="flex justify-center px-4 md-w-3/4 lg:w-2/3 mx-auto text-center">
         <img src={logo} alt="Logo" width={90} />
@@ -46,7 +46,7 @@ const Login = () => {
     <video autoPlay muted loop id="video">
       <source src={bgVideo} type="video/mp4"/>
     </video>
-  </GoogleOAuthProvider>
+  </>
   )
 }
 
