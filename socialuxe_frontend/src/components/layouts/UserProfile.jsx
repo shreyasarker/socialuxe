@@ -19,14 +19,6 @@ const UserProfile = () => {
   const [activeBtn, setActiveBtn] = useState('created');
   const navigate = useNavigate();
   const { userId } = useParams();
-  
-  const fetchUser = async () => {
-    const query = userQuery(userId);
-    await client.fetch(query)
-      .then((data) => {
-        setUser(data[0]);
-      })
-  }
 
   const logOut = () => {
     googleLogout();
@@ -35,7 +27,11 @@ const UserProfile = () => {
   }
 
   useEffect(() => {
-    fetchUser()
+    const query = userQuery(userId);
+    client.fetch(query)
+      .then((data) => {
+        setUser(data[0]);
+      })
   }, [userId]);
 
   useEffect(() => {
