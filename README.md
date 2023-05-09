@@ -20,8 +20,6 @@ Project Link: https://socialuxeshr.netlify.app
 - JS Cookie
 - JWT Decode
 - UUID
-- Laravel Vue Pagination
-- Font Awesome
 
 ### Backend
 
