@@ -1,5 +1,5 @@
 import {Navigate, useLocation} from 'react-router-dom';
-import { fetchUser } from './utils/fetchUser';
+import { fetchUser } from './utils/authUser';
 
 const ProtectedRoute = ({children}) => {
     const user = fetchUser();

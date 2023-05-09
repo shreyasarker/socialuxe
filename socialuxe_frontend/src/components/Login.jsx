@@ -5,13 +5,14 @@ import { client } from '../client.js';
 import { useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import bgVideo from '../assets/bg-video.mp4';
+import { setUser } from '../utils/authUser.js';
 
 const Login = () => {
   const navigate = useNavigate();
 
   const responseMessage = (response) => {
     const user = jwt_decode(response.credential);
-    localStorage.setItem('user', JSON.stringify(user));
+    setUser(user);
     const {name, sub, picture} = user;
     
     const doc = {
