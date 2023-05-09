@@ -1,7 +1,7 @@
 # Socialuxe
 A social media app similar to Pinterest.
 
-Project Link: 
+Project Link: https://socialuxeshr.netlify.app
 
 ## Support
 
