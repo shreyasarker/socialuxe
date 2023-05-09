@@ -86,7 +86,7 @@ const PinDetail = ({ user }) => {
           <h1 className="text-4xl font-bold break-words mt-3">{pinDetail.title}</h1>
           <p className="mt-3">{pinDetail.about}</p>
         </div>
-        <Link to={`user-profile/${pinDetail.postedBy?._id}`} className="flex gap-2 mt-2 items-center bg-white rounded-lg">
+        <Link to={`/user-profile/${pinDetail.postedBy?._id}`} className="flex gap-2 mt-2 items-center bg-white rounded-lg">
           <img src={pinDetail.postedBy?.image} alt="User profile" className="w-8 h-8 rounded-full object-cover" />
           <p className="font-semibold capitalize">{pinDetail.postedBy?.username}</p>
         </Link>
@@ -103,7 +103,7 @@ const PinDetail = ({ user }) => {
           ))}
         </div>
         <div className="flex flex-wrap mt-6 gap-3">
-          <Link to={`user-profile/${pinDetail.postedBy?._id}`}>
+          <Link to={`/user-profile/${pinDetail.postedBy?._id}`}>
             <img src={pinDetail.postedBy?.image} alt="User profile" className="w-10 h-10 rounded-full cursor-pointer" />
           </Link>
           <input type="text" placeholder="Add a comment" value={comment} onChange={(e) => setComment(e.target.value)} className="flex-1 border-gray-100 outline-none border-2 p-2 rounded-2xl focus:border-gray-300"/>
